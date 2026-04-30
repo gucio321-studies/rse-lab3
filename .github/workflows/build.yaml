@@ -10,6 +10,8 @@ jobs:
       - uses: quarto-dev/quarto-actions/setup@v2
       - name: install tinytex
         run: quarto install tinytex
+      - name: Install python dependencies
+        run: pip install nbformat nbclient ipykernel numpy 
       - uses: actions/checkout@v6
 #      - name: Render Quarto Project
 #        uses: quarto-dev/quarto-actions/render@v2
