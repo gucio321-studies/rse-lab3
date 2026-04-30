@@ -19,4 +19,4 @@ jobs:
           path: . # By default, the current working dir is used i.e `quarto render .`
       - uses: actions/upload-artifact@v7
         with:
-          name: *pdf
+          name: "*pdf"
