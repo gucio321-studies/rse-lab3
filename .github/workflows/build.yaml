@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest 
     steps:
       - uses: quarto-dev/quarto-actions/setup@v2
+      - name: install tinytex
+        run: quarto install tinytex
       - uses: actions/checkout@v6
 
       - name: Render Quarto Project
