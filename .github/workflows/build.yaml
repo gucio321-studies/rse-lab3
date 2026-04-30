@@ -11,12 +11,12 @@ jobs:
       - name: install tinytex
         run: quarto install tinytex
       - uses: actions/checkout@v6
-
-      - name: Render Quarto Project
-        uses: quarto-dev/quarto-actions/render@v2
-        with:
-          to: pdf # If set, it will be equivalent to `quarto render --to html`
-          path: . # By default, the current working dir is used i.e `quarto render .`
+#      - name: Render Quarto Project
+#        uses: quarto-dev/quarto-actions/render@v2
+#        with:
+#          to: pdf # If set, it will be equivalent to `quarto render --to html`
+#          path: . # By default, the current working dir is used i.e `quarto render .`
+      - run: quarto render rse_2026.04.30.ipynb --to pdf --execute
       - uses: actions/upload-artifact@v7
         with:
           name: "output.pdf"
